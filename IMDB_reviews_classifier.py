@@ -52,13 +52,13 @@ user_input=st.text_input("Enter movie name you want reviews for")
 if st.button("Get Reviews"):
     result=chain.invoke({'data':data,'movie':user_input})
     st.subheader("Movie Details")
-    st.code(result.Movie_details)
+    st.markdown(result.Movie_details)
 
     st.subheader("Review Summary")
     st.markdown(result.Review_Summary)
 
     st.subheader("Sentiment")
-    st.success(result.Sentiment)
+    st.markdown(result.Sentiment)
 
 
 
